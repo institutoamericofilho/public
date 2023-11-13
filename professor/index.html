@@ -1,6 +1,51 @@
 <html>
 
 <head>
+
+
+    <style>
+        body {
+            background-color: rgb(230, 230, 230);
+        }
+
+        li {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100%; background-color: silver; margin: 0px; padding: 15px;">S.S.P.G. - DES - V.12 - INST PR
+        AMERICO FILHO</div>
+    <center>
+        <br>
+        <img src="../americo-filho-logo.fw.png" width="10%" />
+    </center>
+
+    <h2>
+        Bem vindo <span id="nome"></span>!
+    </h2>
+    <br><br>
+    <h3>
+        Seu informe de pagamento de NOVEMBRO de 2023 já está disponível no menu Contracheque.
+    </h3>
+    <br><br>
+
+    Selecione uma opção:
+    <br><br>
+    <ul>
+        <li>Solicitações Gerais</li>
+        <li>Atestados</li>
+        <li onclick="holerite()">Contracheque (PDF)</li>
+        <li>Férias</li>
+        <li>Lançamentos</li>
+        <li>Registro</li>
+        <li>Trocar Senha</li>
+        <li>Contato</li>
+    </ul>
+
+    <i>2023-11-13 - Acesso logado #12DC11F4-112C4-1FAF-25BB</i>
+
     <script>
         var codigo = document.location.search.split("=")[1];
 
@@ -16,28 +61,11 @@
 
         document.getElementById("nome").innerText = nome;
 
-        function holerite(){
+        function holerite() {
 
-            window.open(codigo+"/holerite.pdf");
+            window.open(codigo + "/holerite.pdf");
         }
     </script>
-</head>
-
-<body>
-    Bem vindo <span id="nome"></span>!
-    <br><br>
-    Seu informe de pagamento de Novembro/23 já está disponivel no menu HOLERITE.
-    <br><br>
-    Selecione uma opção:
-    <br><br>
-    <li>
-        <ul>Solicitações Gerais</ul>
-        <ul>Atestados</ul>
-        <ul onclick="holerite()">Holerite (PDF)</ul>
-        <ul>Férias</ul>
-        <ul>Lançamentos</ul>
-        <ul>Contato</ul>
-    </li>
 </body>
 
 </html>
