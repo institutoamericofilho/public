@@ -2,13 +2,42 @@
 
 <head>
     <script>
-        var codigo = document.location.search;
-        alert("opa " + codigo);
+        var codigo = document.location.search.split("=")[1];
+
+        var nome = "";
+        if (codigo == "2402")
+            nome = "André"
+        else if (codigo == "3105")
+            nome = "Bruna"
+        else if (codigo == "0206")
+            nome = "Ana"
+        else
+            nome = "ERRO!"
+
+        document.getElementById("nome").innerText = nome;
+
+        function holerite(){
+
+            window.open(codigo+"/holerite.pdf");
+        }
     </script>
 </head>
 
 <body>
-
+    Bem vindo <span id="nome"></span>!
+    <br><br>
+    Seu informe de pagamento de Novembro/23 já está disponivel no menu HOLERITE.
+    <br><br>
+    Selecione uma opção:
+    <br><br>
+    <li>
+        <ul>Solicitações Gerais</ul>
+        <ul>Atestados</ul>
+        <ul onclick="holerite()">Holerite (PDF)</ul>
+        <ul>Férias</ul>
+        <ul>Lançamentos</ul>
+        <ul>Contato</ul>
+    </li>
 </body>
 
 </html>
